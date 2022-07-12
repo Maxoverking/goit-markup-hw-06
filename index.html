@@ -463,17 +463,20 @@
                             <label class="modal-box" for="user-mail">Почта</label>
                                 <div class="input-cont">
                                 <input class="field" type="email" name="email" /*id="user-mail"*/ autocomplete="off" />
-                                <svg class="modal-icon small" >
+                                <svg class="modal-icon " >
                                     <use href="./images/icon/icons.svg#icon-mail"></use>
                                 </svg>
                                 </div>
                             
                             <label class="modal-box " for="feedback">Комментарий</label>
-                            <textarea class="coment" name="feedback" id="feedback"  rows="60" placeholder="Введите текст"></textarea>
+                            <textarea class="coment" name="feedback" id="feedback"  rows="50" placeholder="Введите текст"></textarea>
                             
                             <label class="modal-box area " for="check">
-                                <input type="checkbox" name="terms" id="check">
-                                Соглашаюсь с рассылкой и принимаю <a class="modal-terms" href="#">Условия договора</a>
+                                
+                                <input class="checkbox" type="checkbox" name="terms" id="check">
+                                <span class="fakebox"></span>
+                                Соглашаюсь с рассылкой и принимаю 
+                                <a class="modal-terms" href="#">Условия договора</a>   
                             </label>
                             
                             <button class="button submittt" type="submit">Отправить</button>

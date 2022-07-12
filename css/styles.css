@@ -10,7 +10,8 @@
     --basic-text-color: #757575;
     --section-order-service:#2F303A;
     --icon-background:#F5F4FA;
-    --cubic:cubic-bezier(0.4, 0, 0.2, 1)
+    --cubic:cubic-bezier(0.4, 0, 0.2, 1);
+    --placeholder-color:rgba(255, 255, 255, 0.6);
 }
 /* Боди CSS */
 
@@ -580,9 +581,7 @@ ul{
 
 .project-description {
     margin: 0px;
-    padding: 20px 24px;
-    
-    
+    padding: 20px 24px;   
 }
 .project-item{
     flex-basis: calc(100% /3 - 30px);
@@ -595,8 +594,7 @@ ul{
     display: block;
 
     border: 1px solid #EEEEEE;
-    cursor: pointer;
-    
+    cursor: pointer;   
 }
 
 /* .project-item:nth-child(3n) {
@@ -650,8 +648,7 @@ ul{
 .project-link:hover .thumb-text,
 .project-link:hover .cards-thumb::before,
 .project-link:focus .thumb-text,
-.project-link:focus .cards-thumb::before{
-    
+.project-link:focus .cards-thumb::before{  
     transform: translateY(-100%); 
     
 }
@@ -804,13 +801,14 @@ ul{
     background:var(--section-order-service) ;
     
     border: 1px solid rgba(255, 255, 255, 0.3);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15)); */
     border-radius: 4px;
     letter-spacing: 0.03em;
+    
 }
 
 .footer-mail::placeholder{
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--placeholder-color);
 }
 
 .footer-button{
@@ -838,11 +836,12 @@ ul{
 }
 .footer-button span::after{
     display: inline-flex;
-    
     align-items: center;
     content: "";
+
     width: 24px;
     height: 24px;
+
     padding-top: 13px;    
     margin-left: 10px;
 
@@ -938,22 +937,17 @@ ul{
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     cursor: pointer;
-    outline-color: 0;
+    outline: none;
     transition: 250ms var(--cubic);
 }
-input,
-textarea {
-    outline: none;
-    border: none;
-    border: solid 1px #f2f2f2;
-}
+
 .field:hover,
 .field:focus{
     border: 1px solid var(--blue-color);
 }
 
-.field:focus-within+.modal-icon,
-.field:hover+.modal-icon {
+.field:focus + .modal-icon,
+.field:hover + .modal-icon {
     fill: var(--blue-color);
 }
 
@@ -983,6 +977,8 @@ textarea {
     cursor: pointer;
 
     transition: 250ms var(--cubic);
+
+    outline: none;
 }
 .coment:hover,
 .coment:focus{
@@ -1005,5 +1001,30 @@ textarea {
     margin: auto;
     margin-bottom: 40px;
 }
+.submittt:hover{
+    background: #188CE8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
 
+.checkbox{
+    /* -webkit-appearance: none;
+    appearance: none; */
+}
+.fakebox{
+    display: inline-block;
+    
+    width: 16px;
+    height: 15px;
 
+    border: 1px solid var(--black-color);
+    border-radius: 2px;
+    
+}
+.checkbox:checked + .fakebox{ 
+    border-color: var(--blue-color);
+    background: var(--blue-color);
+    background-image: url(../images/icon/icon\ check\ \(2\).svg);
+    background-size: contain;
+    background-origin: border-box;
+    background-repeat: no-repeat;
+}
