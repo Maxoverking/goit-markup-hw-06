@@ -433,8 +433,8 @@
         </div>
         
     </footer> 
-    <!-- Модалка -->is-hidden
-        <div class="overlay  " data-modal >
+    <!-- Модалка -->
+        <div class="overlay is-hidden " data-modal >
             <div class="modal"  >
                 <button type="button" class="modal-button" data-modal-close>
                     <svg class="modal-button-icon" width="11" height="11">
@@ -446,7 +446,7 @@
                         <form class="modal-box-form">
                             <label class="modal-box" for="user-name">Имя</label>
                             <div class="input-cont">
-                                <input class="field " type="text" name="user-name" /*id="user-name"*/ />
+                                <input class="field " type="text" name="user-name" id="user-name" />
                                 <svg class="modal-icon" aria-hidden="true" >
                                     <use href="./images/icon/icons.svg#icon-name" ></use>
                                 </svg>
@@ -454,7 +454,7 @@
 
                             <label class="modal-box" for="user-phone">Телефон</label>
                                 <div class="input-cont">
-                                <input class="field" type="tel" name="phone" /*id="user-phone"*/ />
+                                <input class="field" type="tel" name="phone" id="user-phone" />
                                 <svg class="modal-icon small" >
                                     <use href="./images/icon/icons.svg#icon-phone"></use>
                                 </svg>
@@ -462,19 +462,20 @@
 
                             <label class="modal-box" for="user-mail">Почта</label>
                                 <div class="input-cont">
-                                <input class="field" type="email" name="email" /*id="user-mail"*/ autocomplete="off" />
+                                <input class="field" type="email" name="email" id="user-mail" autocomplete="off" />
                                 <svg class="modal-icon " >
                                     <use href="./images/icon/icons.svg#icon-mail"></use>
                                 </svg>
                                 </div>
                             
                             <label class="modal-box " for="feedback">Комментарий</label>
-                            <textarea class="coment" name="feedback" id="feedback"  rows="50" placeholder="Введите текст"></textarea>
+                            <textarea class="coment" id="feedback" name="feedback" rows="50" placeholder="Введите текст"></textarea>
                             
                             <label class="modal-box area " for="check">
                                 
                                 <input class="checkbox" type="checkbox" name="terms" id="check">
-                                <span class="fakebox"></span>
+                                <span class="icon"></span>
+                                <span class="icon-check"></span>
                                 Соглашаюсь с рассылкой и принимаю 
                                 <a class="modal-terms" href="#">Условия договора</a>   
                             </label>

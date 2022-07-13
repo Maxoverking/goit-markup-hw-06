@@ -927,7 +927,10 @@ ul{
 
 .modal-box {
     display: block;
-    margin-bottom: 4px; 
+
+    margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 1.16;
     letter-spacing: 0.01em;
     /* outline: 1px solid red; */
 }
@@ -980,51 +983,74 @@ ul{
 
     outline: none;
 }
+
 .coment:hover,
 .coment:focus{
     border: 1px solid var(--blue-color);
 }
 
 .area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 14px;
+    line-height: 1.71; 
+    letter-spacing: 0.03em;
+
     margin-top: 20px;
     margin-bottom: 30px;
+    
+    /* outline: 1px solid red; */
 }
-/* .area input[type="checkbox"]{
-    color: var(--black-color);
-} */
-.modal-terms{
-    text-decoration: underline;
+
+/* Подтверждение */
+
+.checkbox {
+    /* -webkit-appearance: none;
+    appearance: none; */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    bottom: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+
+}
+
+.icon {
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    margin-right: 7px;
+    border: 1px solid black;
+    border-radius: 2px;
     
 }
+
+.checkbox:checked + .icon {
+    background-color: var(--blue-color);
+    background-image: url(../images/icon/icon\ check\ \(1\).svg);
+    background-size: contain;
+    background-origin: border-box;
+    border-color: var(--blue-color);
+}
+.modal-terms{
+    color: var(--blue-color);
+    text-decoration: underline;
+    margin-left: 0.5rem;
+}
+
 .submittt{
     display: block;
     margin: auto;
     margin-bottom: 40px;
 }
+
 .submittt:hover{
     background: #188CE8;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
-.checkbox{
-    /* -webkit-appearance: none;
-    appearance: none; */
-}
-.fakebox{
-    display: inline-block;
-    
-    width: 16px;
-    height: 15px;
-
-    border: 1px solid var(--black-color);
-    border-radius: 2px;
-    
-}
-.checkbox:checked + .fakebox{ 
-    border-color: var(--blue-color);
-    background: var(--blue-color);
-    background-image: url(../images/icon/icon\ check\ \(2\).svg);
-    background-size: contain;
-    background-origin: border-box;
-    background-repeat: no-repeat;
-}
