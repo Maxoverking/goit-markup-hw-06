@@ -786,7 +786,9 @@ ul{
     background-color: var(--blue-color);
     
 }
+
 /* Подписаться */
+
 .mail{
     margin-left: 92px;
 }
@@ -806,7 +808,10 @@ ul{
     letter-spacing: 0.03em;
     
 }
-
+.footer-form{
+    display: inline-flex;
+    /* outline: 1px solid red; */
+}
 .footer-mail::placeholder{
     color: var(--placeholder-color);
 }
@@ -814,43 +819,46 @@ ul{
 .footer-button{
     width: 200px;
     height: 50px;
-    margin-left: 12px;
-
+    margin-left: 12px;       
     padding: 0;
+
     background: var(--blue-color);
     border:0;
+
     border-radius: 4px;
     cursor: pointer;
+
+    position: relative; 
+    transition: opacity 250ms var(--cubic);
 }
 .footer-button:hover,
 .footer-button:focus{
     opacity: 0.8;
 }
 .footer-button span{
+    position: absolute;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
     letter-spacing: 0.06em;
-
+    margin: auto;
+    top: 50%;
+    left: 28px;
+    transform: translateY(-50%);
     color: var(--white-color);
 }
-.footer-button span::after{
-    display: inline-flex;
-    align-items: center;
-    content: "";
 
+.footer-fly{
+    position: absolute;
     width: 24px;
     height: 24px;
-
-    padding-top: 13px;    
-    margin-left: 10px;
-
-    background-image: url(../images/icon\ send\ \(1\).svg);
+    top: 50%;
+    right: 28px;
+    transform: translateY(-50%);
 }
 
-
-
 /* Модальное окно */
+
 .overlay {
     position: fixed;
     top: 0;
@@ -941,7 +949,7 @@ ul{
     border-radius: 4px;
     cursor: pointer;
     outline: none;
-    transition: 250ms var(--cubic);
+    transition: border 250ms var(--cubic);
 }
 
 .field:hover,
@@ -966,7 +974,7 @@ ul{
     left: 1rem;
     transform: translateY(-50%);
     fill: var(--black-color);
-    transition: 250ms var(--cubic);
+    transition: fill 250ms var(--cubic);
 }
 
 .coment{
@@ -979,9 +987,17 @@ ul{
     resize: none;
     cursor: pointer;
 
-    transition: 250ms var(--cubic);
+    transition: border 250ms var(--cubic);
 
     outline: none;
+}
+
+.coment::placeholder{
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+    
+    color: rgba(117, 117, 117, 0.5);
 }
 
 .coment:hover,
@@ -1015,6 +1031,7 @@ ul{
     margin: -1px;
     bottom: 0;
     padding: 0;
+
     clip: rect(0 0 0 0);
     overflow: hidden;
 
@@ -1025,7 +1042,7 @@ ul{
     width: 16px;
     height: 15px;
     margin-right: 7px;
-    border: 1px solid black;
+    border: 2px solid var(--black-color);
     border-radius: 2px;
     
 }
@@ -1038,9 +1055,10 @@ ul{
     border-color: var(--blue-color);
 }
 .modal-terms{
-    color: var(--blue-color);
     text-decoration: underline;
     margin-left: 0.5rem;
+
+    color: var(--blue-color);
 }
 
 .submittt{
